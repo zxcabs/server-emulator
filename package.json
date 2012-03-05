@@ -1,0 +1,10 @@
+{
+	"name": "server-emulator",
+	"version": "0.0.1",
+	"description": "Emulating http server",
+	"author": "Evgeny Reznichenko <kusakyky@gmaill.com>",
+	"repository": "https://github.com/zxcabs/server-emulator",
+	"engine": {
+        "node": ">=0.4.0"
+    }
+}

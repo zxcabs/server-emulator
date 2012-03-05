@@ -1,0 +1,6 @@
+test.js
+data/*.txt
+data/*.xml
+
+*.7z
+node_modules/*
