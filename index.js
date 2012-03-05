@@ -79,7 +79,7 @@ readDir('./data', function (err, data) {
 		console.log(err);
 	} else {
 		console.log('creat server');
-		server = httpServer(data, {delay: 0});
+		server = httpServer(data, { delay: 0, acao: true });
 		
 		if (server) {
 			server.listen(9999);
