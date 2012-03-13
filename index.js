@@ -73,13 +73,18 @@ function readDir(dir, fn) {
 
 console.log('read dir');
 readDir('./data', function (err, data) {
-	var server;
+	var server,
+		acaHeader = { 
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Headers': 'Content-Type, Accept, X-Requested-With, Rts-Request',
+			'Access-Control-Allow-Methods': 'POST, GET, DEL, PUT'
+		};
 	
 	if (err) {
 		console.log(err);
 	} else {
 		console.log('creat server');
-		server = httpServer(data, { delay: 0, acao: true });
+		server = httpServer(data, { delay: 0, acaHeader: acaHeader });
 		
 		if (server) {
 			server.listen(9999);
